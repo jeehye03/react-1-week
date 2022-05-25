@@ -1,0 +1,59 @@
+.Wrap{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Contents{
+  width: 300px;
+  height: 700px;
+  background-color: #fff;
+  padding: 16px;
+  margin: 20px auto;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+
+.weekWrap{
+    display: flex;
+    align-items: center;
+    
+}
+
+.circle{
+    width: 30px;    
+    height: 30px;
+    /* background-color: lightgray; */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+
+.triangle{
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid transparent;
+  border-left: 20px solid #800080;;
+  border-right: 0px solid transparent;
+  cursor: pointer;
+}
+
+.saveBtn{
+  margin-top: 30px;
+  width: 100%;
+  height: 50px;
+  background-color: #800080;
+  color: white;
+  font-size: 14px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 10px;
+  cursor: pointer;
+}
