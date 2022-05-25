@@ -14,11 +14,7 @@ const Main = () => {
     const random = Math.floor(Math.random() * 5)+1
      
     rate_sum += random;
- 
-    return { 
-      day: w,
-      rate: random,
-    };
+    console.log(rate_sum)
   });
 
   const rate_avg = (rate_sum / week_rates.length).toFixed(1);

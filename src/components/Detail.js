@@ -5,11 +5,8 @@ import styled from "styled-components";
 
 const Detail = () => {
   const { week_name } = useParams();
-    const history = useHistory();
-    const [clicked, setClicked] = React.useState([0]);
-
-
-
+  const history = useHistory();
+  const [clicked, setClicked] = React.useState([0]);
 
   return (
     <>
@@ -40,8 +37,7 @@ const Detail = () => {
       </button>
     </>
   );
-}
-
+};
 
 export default Detail;
 
@@ -49,12 +45,11 @@ const Circle = styled.div`
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color:lightgray;
+  background-color: lightgray;
   margin-right: 10px;
 `;
 
 const HighLighte = styled.span`
-border-radius: 15px;
-background-color: yellow;
-
-`
+  border-radius: 15px;
+  background-color: yellow;
+`;
