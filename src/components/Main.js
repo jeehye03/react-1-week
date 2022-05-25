@@ -15,7 +15,7 @@ const Main = () => {
     const random = Math.floor(Math.random() * 5)+1
      
     rate_sum += random;
-
+ 
     return { 
       day: w,
       rate: random,
