@@ -16,7 +16,7 @@ const Main = () => {
      
     rate_sum += random;
 
-    return {
+    return { 
       day: w,
       rate: random,
     };
