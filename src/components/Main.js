@@ -9,8 +9,6 @@ const Main = () => {
 
   const circle = [0, 1, 2, 3, 4];
 
-
-
   let rate_sum = 0;
 
   const week_rates = week_list.map((w, idx) => {
