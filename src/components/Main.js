@@ -2,7 +2,6 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
-
 const Main = () => {
   const week_list = ["월", "화", "수", "목", "금", "토", "일"];
   const history = useHistory();
