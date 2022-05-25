@@ -7,7 +7,8 @@ const Detail = () => {
   const { week_name } = useParams();
     const history = useHistory();
     const [clicked, setClicked] = React.useState([0]);
- 
+
+
 
 
   return (
