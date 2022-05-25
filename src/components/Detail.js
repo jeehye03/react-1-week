@@ -7,6 +7,24 @@ const Detail = () => {
   const { week_name } = useParams();
   const history = useHistory();
   const [clicked, setClicked] = React.useState([0]);
+   
+
+  React.useEffect(() => {
+    const press = (e) => {
+      console.log(e);
+
+      // e.key로 받아온(누른 키) 값이 1~5까지 숫자가 맞아?
+      // 저는 배열에 넣고 indexOf로 확인했어요. :)
+      if ([1, 2, 3, 4, 5].indexOf(parseInt(e.key)) !== -1) {
+        // 1~5까지 숫자가 맞으면 state에 넣어주자!
+        setClicked(parseInt(e.key));
+      }
+    };
+    window.addEventListener("keydown", press);
+
+    // 컴포넌트가 언마운트 되면(화면에서 사라지면) 이벤트도 지워줘요!
+    return () => window.removeEventListener("keydown", press);
+  }, []);
 
   return (
     <>

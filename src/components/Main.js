@@ -3,8 +3,24 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const Main = () => {
-  const week_list = ["월", "화", "수", "목", "금", "토", "일"];
+  const week_list = [ "일", "월", "화", "수", "목", "금", "토"];
   const history = useHistory();
+  // const day = new Date().getDay();
+  // const today = week_list[day] + '요일';
+  
+  // week_list.forEach(() => { })
+ 
+
+  // console.log(today)
+
+  const date = new Date().getDay();
+
+  
+
+  const daytoo = week_list.map((v, i) => {
+    return i <= date  ? week_list[ i + date ] : week_list[i-5];
+  });
+  console.log(daytoo);
 
   const circle = [0, 1, 2, 3, 4];
 
@@ -13,8 +29,8 @@ const Main = () => {
   const week_rates = week_list.map((w, idx) => {
     const random = Math.floor(Math.random() * 5)+1
      
-    rate_sum += random;
-    console.log(rate_sum)
+    return rate_sum += random;
+   
   });
 
   const rate_avg = (rate_sum / week_rates.length).toFixed(1);
