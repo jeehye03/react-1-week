@@ -14,15 +14,15 @@ const Detail = () => {
       console.log(e);
 
       // e.key로 받아온(누른 키) 값이 1~5까지 숫자가 맞아?
-      // 저는 배열에 넣고 indexOf로 확인했어요. :)
+      // 배열로 담기위해 indexOf
       if ([1, 2, 3, 4, 5].indexOf(parseInt(e.key)) !== -1) {
-        // 1~5까지 숫자가 맞으면 state에 넣어주자!
+        // 1~5까지 숫자가 맞으면 state에 담아주기
         setClicked(parseInt(e.key));
       }
     };
     window.addEventListener("keydown", press);
 
-    // 컴포넌트가 언마운트 되면(화면에서 사라지면) 이벤트도 지워줘요!
+    // 화면에서 사라지면 이벤트 삭제 (컴포넌트가 언마운트)
     return () => window.removeEventListener("keydown", press);
   }, []);
 

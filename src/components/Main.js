@@ -3,26 +3,10 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const Main = () => {
-  const week_list = [ "일", "월", "화", "수", "목", "금", "토"];
-  const history = useHistory();
-  // const day = new Date().getDay();
-  // const today = week_list[day] + '요일';
-  
-  // week_list.forEach(() => { })
+  const week_list = ["일", "월", "화", "수", "목", "금", "토"];
  
+  const history = useHistory();
 
-  // console.log(today)
-
-  const date = new Date().getDay();
-
-  
-
-  const daytoo = week_list.map((v, i) => {
-    return i <= date  ? week_list[ i + date ] : week_list[i-5];
-  });
-  console.log(daytoo);
-
-  const circle = [0, 1, 2, 3, 4];
 
   let rate_sum = 0;
 
@@ -51,7 +35,7 @@ const Main = () => {
             <h4 key={index} style={{ paddingRight: "10px" }}>
               {list}
             </h4>
-            {circle.map((item, i) => {
+            {/* {circle.map((item, i) => {
               return (
                 <Circle
                   key={i}
@@ -60,11 +44,13 @@ const Main = () => {
                   }}
                 />
               );
-            })}
-
-            {/* {Array.from({ length: 5 }, (item, idx) => {        
-              return <Circle key={idx} />;
             })} */}
+
+            {Array.from({ length: 5 }, (item, idx) => {        
+              return <Circle key={idx} style={{
+                    backgroundColor: idx <= randomCircle ? "gold" : "#ddd",
+                  }}/>;
+            })}
 
             <div
               className="triangle"
